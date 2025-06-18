@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>202120197</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./common/p5template/p5template.css" />
+
+    <script src="./common/p5template/responsive.js"></script>
+    <script src="./common/p5template/scroll.js"></script>
+    <script src="./common/p5template/title.js"></script>
+    <script src="./common/p5template/references.js"></script>
+    <script src="./common/p5template/paging.js"></script>
+
+    <script>
+      new P5Template.Scroll();
+      new P5Template.Title('종강런!', '강채령', '2025');
+
+      const references = [
+        {
+          title: '크롬 공룡게임 만들기',
+          authors: ['애플코딩'],
+          year: '2022',
+          publisher: '애플코딩 - YouTube',
+          url: 'https://youtu.be/7TXGvVblfLs',
+        },
+        {
+          title: '250425a',
+          authors: ['Okazz'],
+          year: '2025',
+          publisher: 'OpenProcessing',
+          url: 'https://openprocessing.org/sketch/2625827',
+        },
+        {
+          title:
+            'Nature of Code 자연계 법칙을 디지털 세계로 옮기는 컴퓨터 프로그래밍 전략',
+          authors: ['다니엘 쉬프만'],
+          translators: ['윤인성'],
+          year: '2015',
+          publisher: '한빛미디어',
+        },
+      ];
+
+      new P5Template.References(references);
+      new P5Template.Paging();
+    </script>
+
+    <!-- p5.js 라이브러리 로딩 -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+    <!-- ✅ 소리 인식용 라이브러리 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
+    <!-- ml5.js 로딩 -->
+    <script src="https://cdn.jsdelivr.net/npm/ml5@0.12.2/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <!-- 본인 스케치 로딩 -->
+    <script src="./sketches/sketch.js" defer></script>
+  </head>
+  <body>
+    <main id="main">
+      <section
+        id="section-canvas"
+        class="section section--canvas canvas"
+        data-full-width="false"
+      >
+        <div class="container canvas__container">
+          <div id="canvas-container"></div>
+        </div>
+      </section>
+      <section id="section-control" class="section section--control control">
+        <div class="container control__container">
+          <div class="control__label">
+            <div class="control__label__title title"></div>
+            <div class="control__label__author author"></div>
+          </div>
+          <div class="control__paging">
+            <button
+              id="button-prev"
+              class="icon-button control__button control__button--prev"
+              data-icon="arrow_back_ios_new"
+            ></button>
+            <button
+              id="button-next"
+              class="icon-button control__button control__button--next"
+              data-icon="arrow_forward_ios"
+            ></button>
+            <button
+              id="button-list"
+              class="icon-button control__button control__button--list"
+              data-icon="grid_view"
+            ></button>
+          </div>
+          <div class="control__scroll">
+            <button
+              id="button-scroll"
+              class="icon-button control__button control__button--scroll"
+              data-icon="arrow_drop_down"
+            ></button>
+          </div>
+        </div>
+      </section>
+      <section
+        id="section-information"
+        class="section section--information information"
+      >
+        <div class="container information__container">
+          <div class="information__label">
+            <h1 class="information__label__title title"></h1>
+            <h2 class="information__label__author author"></h2>
+          </div>
+          <div class="information__description">
+            <p>
+              끊임없이 몰아치는 고난과 역경 속에서, 오늘도 대학생은 종강을 향해
+              힘차게 달려갑니다! 여러분은 직접 **플레이어(대학생)**가 되어, 학기
+              중 마주치는 온갖 어려움들을 재치 있게 피해 나가야 합니다. 이
+              게임은 대학생활의 고단함을 유쾌하게 풀어낸 인터랙티브 경험으로,
+              현실에서 학생들이 겪는 고충에 대해 재미있게 공감할 수 있는 색다른
+              방식의 체험을 제공합니다. 종강을 향한 그 여정, 과연 무사히
+              완주하실 수 있을까요?
+            </p>
+            <p>
+              점프하기 🦘 입을 벌리면 캐릭터가 점프합니다. 입을 크게 벌릴수록
+              점프 높이도 함께 증가합니다.
+            </p>
+
+            <p>
+              천천히 떨어지기 ☁️ 점프 중에 소리를 내면, 캐릭터가 공중에 잠시
+              머물며 천천히 떨어집니다. 마치 부유하는 듯한 느낌을 주며, 장애물을
+              피하는 데 도움이 됩니다.
+            </p>
+          </div>
+          <div class="information__reference">
+            <div class="information__reference__wrap">
+              <div class="information__reference__title">참고자료</div>
+              <ol></ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
