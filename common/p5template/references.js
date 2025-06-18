@@ -38,7 +38,7 @@
           url: 'https://www.youtube.com/watch?v=7r83N3c2kPw',
         },
         {
-          title: '250425a',
+          title: '25042a',
           authors: ['Okazz'],
           year: '2025',
           publisher: 'OpenProcessing',

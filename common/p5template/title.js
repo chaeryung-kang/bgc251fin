@@ -19,7 +19,7 @@
      *   - selectorAuthor: 저자 템플릿 요소 선택자 (기본값: '.author')
      */
     constructor(
-      title = '키스의 고유 조건은 입술끼리 만나야 하고 특별한 기술은 필요치 않다',
+      title = '종강런!',
       designer = '강채령',
       year = '2025',
       options = { selectorTitle: '.title', selectorAuthor: '.author' }
